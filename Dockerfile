@@ -13,7 +13,7 @@ ENV JAVA_VERSION_MAJOR=8 \
     GLIBC_REPO=https://github.com/sgerrand/alpine-pkg-glibc \
     GLIBC_VERSION=2.29-r0 \
     LANG=C.UTF-8
-RUN apk --no-cache update && apk --no-cache add zip \
+RUN apk --no-cache update && apk --no-cache add unzip \
     && apk --purge del curl	
 
 # do all in one step
