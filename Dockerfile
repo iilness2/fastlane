@@ -10,4 +10,4 @@ RUN apk add --update g++ make
 RUN gem install fastlane
 
 
-USER iilness
+USER root
