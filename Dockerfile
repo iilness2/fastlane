@@ -14,7 +14,7 @@ ENV JAVA_VERSION_MAJOR=8 \
     GLIBC_VERSION=2.29-r0 \
     LANG=C.UTF-8
 RUN apk --no-cache update && apk --no-cache add zip \
-    apk --purge del curl	
+    && apk --purge del curl	
 
 # do all in one step
 RUN set -ex && \
