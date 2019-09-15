@@ -14,6 +14,8 @@ ENV JAVA_VERSION_MAJOR=8 \
     GLIBC_VERSION=2.29-r0 \
     LANG=C.UTF-8
 
+RUN apk install zip
+
 # do all in one step
 RUN set -ex && \
     [[ ${JAVA_VERSION_MAJOR} != 7 ]] || ( echo >&2 'Oracle no longer publishes JAVA7 packages' && exit 1 ) && \
