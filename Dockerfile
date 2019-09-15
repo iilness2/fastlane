@@ -1,11 +1,14 @@
 FROM ruby:alpine
+LABEL maintainer "iilness <andre.aliaman90@gmail.com>"
+
+ENV LANG "en_US.UTF-8"
+ENV LANGUAGE "en_US.UTF-8"
+ENV LC_ALL "en_US.UTF-8"
 
 RUN deluser guest ; delgroup users
-RUN addgroup -g 985 -S users
-RUN adduser -S -G users -u 1000 -s /bin/sh -h /home/iilness iilness
 
 RUN mkdir workdir
-workdir workdir
+WORKDIR workdir
 RUN apk add --update g++ make
 RUN gem install fastlane
 
